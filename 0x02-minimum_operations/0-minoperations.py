@@ -14,16 +14,16 @@ def minOperations(n):
                an integer
     """
 
-    nw = 1
-    start = 0
-    c = 0
-    while nw < n:
-        remainder = n - now
-        if (remainder % now == 0):
-            start = nw
-            nw += start
-            c += 2
+    number = n
+    x = 2
+    cnt = 0
+
+    while (number > 1):
+        if number % x == 0:
+            number = int(number / x)
+            cnt += x
+            x = 2
         else:
-            nw += start
-            c += 1
-    return c
+            x += 1
+
+    return cnt
