@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""
+Method to print
+"""
 import sys
 
 
