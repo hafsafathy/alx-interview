@@ -23,7 +23,7 @@ def queensgame(n, i=0, a=[], b=[], c=[]):
     if i < n:
         for j in range(n):
             if j not in a and i + j not in b and i - j not in c:
-                yield from queens(n, i + 1, a + [j], b + [i + j], c + [i - j])
+                yield from queensgame(n, i + 1, a + [j], b + [i + j], c + [i - j])
     else:
         yield a
 
@@ -32,7 +32,7 @@ def solvig(n):
     """ solve """
     h = []
     i = 0
-    for solution in queens(n, 0):
+    for solution in queensgame(n, 0):
         for s in solution:
             h.append([i, s])
             i += 1
