@@ -42,4 +42,3 @@ def solvig(n):
 
 
 solvig(n)
-
