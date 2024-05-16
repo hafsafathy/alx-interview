@@ -4,10 +4,10 @@
 
 def validUTF8(data):
     """
-     method that determines if a given data set represents a valid UTF-8 encoding.
+    method that determines if a given data set represents a valid UTF-8 encoding.
     """
-
     numby = 0
+
     n1 = 1 << 7
     n2 = 1 << 6
 
@@ -28,7 +28,7 @@ def validUTF8(data):
                 return False
         else:
             if not (i & n1 and not (i & n2)):
-                    return False
+                return False
 
         numby -= 1
 
@@ -36,3 +36,4 @@ def validUTF8(data):
         return True
 
     return False
+
