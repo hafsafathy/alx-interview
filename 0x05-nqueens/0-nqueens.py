@@ -41,4 +41,4 @@ def solvig(n):
         i = 0
 
 
-solving(n)
+solvig(n)
