@@ -27,7 +27,7 @@ def validUTF8(data):
             if numby == 1 or numby > 4:
                 return False
         else:
-            if not (i & n1 and not (i & n2)):
+            if not (i & n1 and not i & n2):
                 return False
 
         numby -= 1
@@ -36,4 +36,3 @@ def validUTF8(data):
         return True
 
     return False
-
