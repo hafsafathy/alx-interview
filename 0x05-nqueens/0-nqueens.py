@@ -19,7 +19,7 @@ n = int(sys.argv[1])
 
 
 def queensgame(n, i=0, a=[], b=[], c=[]):
-    """ find positions """
+    """find positions"""
     if i < n:
         for j in range(n):
             if j not in a and i + j not in b and i - j not in c:
@@ -29,7 +29,7 @@ def queensgame(n, i=0, a=[], b=[], c=[]):
 
 
 def solvig(n):
-    """ solve """
+    """solve"""
     h = []
     i = 0
     for solution in queensgame(n, 0):
@@ -42,3 +42,4 @@ def solvig(n):
 
 
 solvig(n)
+
