@@ -1,10 +1,16 @@
 #!/usr/bin/python3
 
+<<<<<<< HEAD
 '''
 Method to print
 
 '''
 
+=======
+"""
+method to print
+"""
+>>>>>>> eafcb17d1cafd5a13a68f70614b23ef9958c322e
 import sys
 
 
@@ -27,18 +33,20 @@ def printer(dict_sc, TFile_size):
 TFile_size = 0
 code = 0
 c = 0
-dict_sc = {"200": 0,
-           "301": 0,
-           "400": 0,
-           "401": 0,
-           "403": 0,
-           "404": 0,
-           "405": 0,
-           "500": 0}
+dict_sc = {
+    "200": 0,
+    "301": 0,
+    "400": 0,
+    "401": 0,
+    "403": 0,
+    "404": 0,
+    "405": 0,
+    "500": 0,
+}
 
 try:
     for line in sys.stdin:
-        parsed_line = line.split()  
+        parsed_line = line.split()
         parsed_line = parsed_line[::-1]
 
         if len(parsed_line) > 2:
@@ -48,10 +56,10 @@ try:
                 TFile_size += int(parsed_line[0])
                 code = parsed_line[1]
 
-                if (code in dict_sc.keys()):
+                if code in dict_sc.keys():
                     dict_sc[code] += 1
 
-            if (c == 10):
+            if c == 10:
                 printer(dict_sc, TFile_size)
                 c = 0
 
